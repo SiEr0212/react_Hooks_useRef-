@@ -1,6 +1,6 @@
 import React from "react";
 
-function Input({ placeholder, style }, ref) {
+function Input({ placeholder, style, onKeyDown }, ref) {
   return (
     <input
       onKeyDown={onKeyDown}

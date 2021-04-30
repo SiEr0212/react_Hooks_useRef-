@@ -22,11 +22,14 @@ function App() {
     //nameRef.current.focus();
   }, []);
 
-const firstNameKeyDown = () => {
+const firstNameKeyDown = (e) => {
+  if(e.key === "Enter"){
+    lastNameRef.current.focus()
+  }
 
 }
 
-const lastNameKeyDown = () => {
+const lastNameKeyDown = (e) => {
   
 }
 
