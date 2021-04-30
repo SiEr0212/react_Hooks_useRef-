@@ -1,5 +1,16 @@
 import React from "react";
 
-export default function Input({ placeholder, style }) {
-  return <input type="text" placeholder={placeholder} style={style} />;
+function Input({ placeholder, style }, ref) {
+  return (
+    <input
+      onKeyDown={onKeyDown}
+      ref={ref}
+      type="text"
+      placeholder={placeholder}
+      style={style}
+    />
+  );
 }
+const ForwardedInput = React.forwardRef(Input);
+
+export default ForwardedInput;
