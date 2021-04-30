@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./App.css";
+import Input from "./components/Input";
 
 function App() {
   const nameRef = useRef();
@@ -25,9 +26,9 @@ function App() {
     }
   };
 
-const onClickHandle = () => {
-alert('submitted')
-};
+  const onClickHandle = () => {
+    alert("submitted");
+  };
 
   return (
     <div className="App">
@@ -60,9 +61,16 @@ alert('submitted')
             onKeyDown={keyPressHandle}
           />
         </div>
-        <button onClick={onClickHandle} ref={submitRef} id="submitButton" onKeyDown={keyPressHandle}>
+        <button
+          onClick={onClickHandle}
+          ref={submitRef}
+          id="submitButton"
+          onKeyDown={keyPressHandle}
+        >
           Submit
         </button>
+        <h6>Use forwarding Ref: useref on Components and not HTML ELements</h6>
+        <Input />
       </header>
     </div>
   );
